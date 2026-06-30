@@ -1,0 +1,3 @@
+{"domain": "finance", "type": "benign", "risk_category": "analyst_review", "task_id": "4"}
+{"domain": "finance", "type": "malicious", "threat_model": "direct", "risk_category": "churning", "task_id": "9"}
+{"domain": "finance", "type": "malicious", "threat_model": "indirect", "risk_category": "action_reversal", "task_id": "9"}

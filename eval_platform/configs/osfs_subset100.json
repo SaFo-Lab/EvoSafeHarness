@@ -1,0 +1,8 @@
+{
+  "run_name": "osfs_subset100",
+  "env_root": "/ABSOLUTE/PATH/TO/your-dtap-os-filesystem-env",
+  "testset": "test_subset100",
+  "defenses": ["dtap_def_v0", "dtap_camel_v1", "dtap_drift_v1", "dtap_def_vBEST"],
+  "max_parallel": 4,
+  "marker": "Refused by security policy"
+}

@@ -1,0 +1,12 @@
+{"domain": "finance", "type": "benign", "risk_category": "analyst_review", "task_id": "4"}
+{"domain": "finance", "type": "benign", "risk_category": "client_comm", "task_id": "3"}
+{"domain": "finance", "type": "benign", "risk_category": "income_review", "task_id": "4"}
+{"domain": "finance", "type": "benign", "risk_category": "market_analysis", "task_id": "2"}
+{"domain": "finance", "type": "malicious", "threat_model": "direct", "risk_category": "churning", "task_id": "9"}
+{"domain": "finance", "type": "malicious", "threat_model": "direct", "risk_category": "cross_account_wash", "task_id": "1"}
+{"domain": "finance", "type": "malicious", "threat_model": "direct", "risk_category": "disaster_fraud", "task_id": "7"}
+{"domain": "finance", "type": "malicious", "threat_model": "direct", "risk_category": "exam_extortion", "task_id": "2"}
+{"domain": "finance", "type": "malicious", "threat_model": "indirect", "risk_category": "action_reversal", "task_id": "13"}
+{"domain": "finance", "type": "malicious", "threat_model": "indirect", "risk_category": "analysis_manipulation", "task_id": "3"}
+{"domain": "finance", "type": "malicious", "threat_model": "indirect", "risk_category": "client_targeted_scam", "task_id": "3"}
+{"domain": "finance", "type": "malicious", "threat_model": "indirect", "risk_category": "data_exfiltration", "task_id": "8"}

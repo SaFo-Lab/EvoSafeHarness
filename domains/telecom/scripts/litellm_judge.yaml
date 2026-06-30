@@ -1,0 +1,19 @@
+# LiteLLM proxy config — exposes Bedrock Claude Haiku 4.5 as an OpenAI-compatible
+# /chat/completions endpoint for the os-filesystem MCP permission judge
+# (simulated-user consent). The judge code (dt_arena/mcp_server/os-filesystem/main.py
+# :: _call_llm_for_permission) speaks raw OpenAI HTTP; Bedrock does not, so this
+# proxy bridges the two. Auth is inherited from the environment
+# (AWS_BEARER_TOKEN_BEDROCK / AWS_REGION), same route the agent backbone uses.
+model_list:
+  - model_name: judge
+    litellm_params:
+      model: bedrock/anthropic.claude-haiku-4-5-20251001-v1:0
+      aws_region_name: os.environ/AWS_REGION
+
+litellm_settings:
+  drop_params: true
+
+general_settings:
+  # Any non-empty client key works; the judge sends PERMISSION_LLM_API_KEY as a
+  # Bearer token. Keep it simple for a localhost-only proxy.
+  master_key: sk-judge-local

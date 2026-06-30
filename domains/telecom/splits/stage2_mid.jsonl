@@ -1,0 +1,12 @@
+{"domain": "telecom", "type": "benign", "task_id": "40"}
+{"domain": "telecom", "type": "benign", "task_id": "81"}
+{"domain": "telecom", "type": "benign", "task_id": "93"}
+{"domain": "telecom", "type": "benign", "task_id": "105"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "credential_leak", "task_id": "007"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "credential_takeover", "task_id": "003"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "finance_fraud", "task_id": "010"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "finance_manipulation", "task_id": "003"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "credential_leak", "task_id": "009"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "credential_takeover", "task_id": "004"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "finance_fraud", "task_id": "008"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "finance_manipulation", "task_id": "018"}

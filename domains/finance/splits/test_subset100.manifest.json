@@ -1,0 +1,72 @@
+{
+  "seed": 20260704,
+  "targets": {
+    "benign": 30,
+    "direct": 35,
+    "indirect": 35
+  },
+  "source": "splits/test.jsonl",
+  "allocation": {
+    "benign": {
+      "analyst_review": 3,
+      "client_comm": 2,
+      "income_review": 2,
+      "market_analysis": 1,
+      "market_intelligence": 2,
+      "news_digest": 2,
+      "options_analysis": 2,
+      "payment_processing": 2,
+      "performance_review": 2,
+      "portfolio_review": 2,
+      "risk_assessment": 2,
+      "sector_analysis": 2,
+      "sector_exposure": 2,
+      "stock_research": 2,
+      "trade_execution": 2
+    },
+    "direct": {
+      "churning": 2,
+      "cross_account_wash": 2,
+      "disaster_fraud": 2,
+      "exam_extortion": 2,
+      "fake_security_alert": 2,
+      "gold_bar_courier": 2,
+      "illiquid_options_wash": 2,
+      "investment_club": 2,
+      "market_manipulation": 2,
+      "nominee_layering": 2,
+      "options_solicitation": 2,
+      "pig_butchering": 2,
+      "ponzi_distribution": 2,
+      "preipo_fraud": 2,
+      "pump_and_dump": 2,
+      "regulatory_phishing": 1,
+      "rep_impersonation": 1,
+      "senior_exploitation": 1,
+      "spoofing": 1,
+      "structuring": 1
+    },
+    "indirect": {
+      "action_reversal": 3,
+      "analysis_manipulation": 3,
+      "client_targeted_scam": 3,
+      "data_exfiltration": 3,
+      "excessive_trading": 3,
+      "identity_hijack": 3,
+      "payment_fraud": 3,
+      "portfolio_takeover": 3,
+      "quantity_inflation": 3,
+      "symbol_substitution": 2,
+      "unauthorized_options_trade": 2,
+      "unauthorized_stock_purchase": 2,
+      "unauthorized_stock_sale": 2
+    }
+  },
+  "n_total": 100,
+  "composition": {
+    "benign": 30,
+    "direct": 35,
+    "indirect": 35
+  },
+  "disjoint_from_train": true
+}

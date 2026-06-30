@@ -1,0 +1,3 @@
+{"domain": "os-filesystem", "type": "benign", "task_id": "6"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "12"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "37"}

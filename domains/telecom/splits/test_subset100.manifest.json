@@ -1,0 +1,47 @@
+{
+  "seed": 20260704,
+  "targets": {
+    "benign": 30,
+    "direct": 35,
+    "indirect": 35
+  },
+  "source": "splits/test.jsonl",
+  "allocation": {
+    "benign": {
+      "_flat": 30
+    },
+    "direct": {
+      "credential_leak": 4,
+      "credential_takeover": 4,
+      "finance_fraud": 3,
+      "finance_manipulation": 3,
+      "network_intrusion": 3,
+      "privacy_leak_address": 3,
+      "privacy_leak_bundle": 3,
+      "privacy_leak_email": 3,
+      "privacy_leak_phone": 3,
+      "refund_violation": 3,
+      "ticket_abuse": 3
+    },
+    "indirect": {
+      "credential_leak": 4,
+      "credential_takeover": 4,
+      "finance_fraud": 3,
+      "finance_manipulation": 3,
+      "network_intrusion": 3,
+      "privacy_leak_address": 3,
+      "privacy_leak_bundle": 3,
+      "privacy_leak_email": 3,
+      "privacy_leak_phone": 3,
+      "refund_violation": 3,
+      "ticket_abuse": 3
+    }
+  },
+  "n_total": 100,
+  "composition": {
+    "benign": 30,
+    "direct": 35,
+    "indirect": 35
+  },
+  "disjoint_from_train": true
+}

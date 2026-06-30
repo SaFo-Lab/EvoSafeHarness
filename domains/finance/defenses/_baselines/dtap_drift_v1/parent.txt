@@ -1,0 +1,20 @@
+parent: baseline (human-designed, ported)
+
+Faithful port of DRIFT (plan-then-validate trajectory defense) onto the DTAP
+Defense interface, used as a published BASELINE alongside dtap_camel_v1.
+
+Source of truth: benchmarks/agentdyn-src/src/agentdojo/defenses/drift/
+
+Ported: plan construction from the trusted query (CONSTRAINTS_BUILD_PROMPT ->
+function_trajectory + parameter_checklist), trajectory constraint validation
+(node_check, deterministic for in-plan calls), and the alignment_judge (ported
+with its original prompt; decides Yes/No from initial trajectory + current
+trajectory + user query only — no untrusted tool output). Deviation judged
+misaligned -> refused with DRIFT's [CALL ERROR] trajectory-deviation message.
+
+Simplification (honest): DRIFT's per-parameter checklist node_check is the
+brittle part of the original and is not enforced; the function-trajectory +
+alignment-judge core is. Defends INDIRECT injection (off-plan deviation), not
+DIRECT attacks (the malicious goal is the user query = the plan). Planner/judge
+run on the Haiku judge proxy (cost-logged); judge fires only on deviations.
+Fail-open if the planner fails (no plan -> cannot validate).

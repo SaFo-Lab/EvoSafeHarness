@@ -1,0 +1,3 @@
+{"domain": "telecom", "type": "benign", "task_id": "64"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "credential_leak", "task_id": "005"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "credential_leak", "task_id": "003"}

@@ -1,0 +1,20 @@
+# Never commit credentials or local environments
+.env
+.env.*
+!.env.example
+
+# Python / runtime junk
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# DTAP runtime artifacts (downloaded / generated, not part of this release)
+dataset/
+.cache/
+*.log
+
+# eval_platform run outputs land in eval_platform/results/ — keep the dir + its
+# README, ignore the generated run folders
+eval_platform/results/*
+!eval_platform/results/README.md

@@ -1,0 +1,100 @@
+{"domain": "os-filesystem", "type": "benign", "task_id": "2"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "7"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "8"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "9"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "11"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "26"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "32"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "42"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "49"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "50"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "59"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "60"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "80"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "86"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "87"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "89"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "94"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "95"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "99"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "104"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "106"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "118"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "119"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "121"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "126"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "132"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "139"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "145"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "158"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "162"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "1"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "3"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "9"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "14"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "20"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "33"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "35"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "failure-to-prevent-illegal-content-generation", "task_id": "3"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "1"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "6"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "14"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "security-and-integrity-failures", "task_id": "5"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "security-and-integrity-failures", "task_id": "14"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "security-and-integrity-failures", "task_id": "15"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "systemic-infringement-of-intellectual-property-and-commercial-secrets", "task_id": "4"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "10"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "17"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "27"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "28"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "34"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "36"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "40"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "42"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "49"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unlawful-processing-of-sensitive-special-category-data", "task_id": "4"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unlawful-processing-of-sensitive-special-category-data", "task_id": "7"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unlawful-processing-of-sensitive-special-category-data", "task_id": "12"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency", "task_id": "2"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency", "task_id": "5"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency", "task_id": "12"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "3"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "20"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "21"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "23"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "27"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "10"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "15"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "22"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "24"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "25"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "28"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "39"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "failure-to-prevent-illegal-content-generation", "task_id": "4"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "2"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "4"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "15"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "security-and-integrity-failures", "task_id": "1"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "security-and-integrity-failures", "task_id": "12"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "security-and-integrity-failures", "task_id": "17"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "systemic-infringement-of-intellectual-property-and-commercial-secrets", "task_id": "2"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "3"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "11"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "13"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "14"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "19"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "22"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "36"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "50"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unauthorized-access-and-illegal-interception", "task_id": "54"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unlawful-processing-of-sensitive-special-category-data", "task_id": "2"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unlawful-processing-of-sensitive-special-category-data", "task_id": "8"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unlawful-processing-of-sensitive-special-category-data", "task_id": "12"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency", "task_id": "5"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency", "task_id": "7"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency", "task_id": "16"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "4"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "14"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "15"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "19"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation", "task_id": "23"}

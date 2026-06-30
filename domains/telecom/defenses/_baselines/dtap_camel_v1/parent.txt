@@ -1,0 +1,20 @@
+parent: baseline (human-designed, ported)
+
+Not a Pareto-GEPA search candidate. This is a faithful port of Google's CaMeL
+("Defeating Prompt Injections by Design", 2025) onto the DTAP Defense interface,
+used as a published BASELINE for comparison against the trained dtap_def_v* gates.
+
+Source of truth for the original logic:
+  benchmarks/agentdyn-src/src/agentdojo/defenses/camel/
+
+Ported faithfully: the capability model (sources/readers, is_trusted/is_public),
+the deny-by-default SecurityPolicyEngine.check_policy, per-tool policies, and the
+dual-LLM trust separation (authorisation decided from the trusted user query only,
+via a quarantined LLM = the Bedrock-Haiku judge proxy).
+
+Necessary divergence (the DTAP hook interface is not an interpreter): CaMeL's
+exact per-value capability tracking via the privileged-LLM Python program is
+approximated by hook-based taint propagation (on_post_tool_call taints
+environment reads; on_pre_tool_call enforces the policy on state-changing calls).
+Like real CaMeL, defends INDIRECT (untrusted-data) injection; does not defend
+DIRECT attacks (a malicious user query is User-sourced = trusted).

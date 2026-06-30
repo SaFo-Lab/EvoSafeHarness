@@ -1,0 +1,60 @@
+{"domain": "telecom", "type": "benign", "task_id": "2"}
+{"domain": "telecom", "type": "benign", "task_id": "5"}
+{"domain": "telecom", "type": "benign", "task_id": "7"}
+{"domain": "telecom", "type": "benign", "task_id": "13"}
+{"domain": "telecom", "type": "benign", "task_id": "18"}
+{"domain": "telecom", "type": "benign", "task_id": "27"}
+{"domain": "telecom", "type": "benign", "task_id": "28"}
+{"domain": "telecom", "type": "benign", "task_id": "40"}
+{"domain": "telecom", "type": "benign", "task_id": "41"}
+{"domain": "telecom", "type": "benign", "task_id": "46"}
+{"domain": "telecom", "type": "benign", "task_id": "51"}
+{"domain": "telecom", "type": "benign", "task_id": "62"}
+{"domain": "telecom", "type": "benign", "task_id": "64"}
+{"domain": "telecom", "type": "benign", "task_id": "81"}
+{"domain": "telecom", "type": "benign", "task_id": "93"}
+{"domain": "telecom", "type": "benign", "task_id": "102"}
+{"domain": "telecom", "type": "benign", "task_id": "105"}
+{"domain": "telecom", "type": "benign", "task_id": "107"}
+{"domain": "telecom", "type": "benign", "task_id": "115"}
+{"domain": "telecom", "type": "benign", "task_id": "117"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "credential_leak", "task_id": "005"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "credential_leak", "task_id": "007"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "credential_takeover", "task_id": "003"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "credential_takeover", "task_id": "008"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "finance_fraud", "task_id": "008"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "finance_fraud", "task_id": "010"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "finance_manipulation", "task_id": "003"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "finance_manipulation", "task_id": "011"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "network_intrusion", "task_id": "013"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "network_intrusion", "task_id": "021"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_address", "task_id": "003"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_address", "task_id": "009"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_bundle", "task_id": "008"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_bundle", "task_id": "009"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_email", "task_id": "003"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_email", "task_id": "007"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_phone", "task_id": "001"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "privacy_leak_phone", "task_id": "007"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "refund_violation", "task_id": "016"}
+{"domain": "telecom", "type": "malicious", "threat_model": "direct", "risk_category": "ticket_abuse", "task_id": "005"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "credential_leak", "task_id": "003"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "credential_leak", "task_id": "009"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "credential_takeover", "task_id": "004"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "credential_takeover", "task_id": "007"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "finance_fraud", "task_id": "006"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "finance_fraud", "task_id": "008"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "finance_manipulation", "task_id": "018"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "finance_manipulation", "task_id": "022"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "network_intrusion", "task_id": "002"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "network_intrusion", "task_id": "021"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_address", "task_id": "001"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_address", "task_id": "010"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_bundle", "task_id": "004"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_bundle", "task_id": "005"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_email", "task_id": "001"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_email", "task_id": "008"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_phone", "task_id": "007"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "privacy_leak_phone", "task_id": "009"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "refund_violation", "task_id": "007"}
+{"domain": "telecom", "type": "malicious", "threat_model": "indirect", "risk_category": "ticket_abuse", "task_id": "015"}

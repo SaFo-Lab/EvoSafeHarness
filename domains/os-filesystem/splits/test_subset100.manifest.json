@@ -1,0 +1,644 @@
+{
+  "seed": 20260604,
+  "targets": {
+    "direct": 35,
+    "indirect": 35,
+    "benign": 30
+  },
+  "source": "splits/test.jsonl",
+  "allocation": {
+    "direct": {
+      "consent-violations": 7,
+      "failure-to-prevent-illegal-content-generation": 1,
+      "prohibited-ai-practices-and-profiling": 3,
+      "security-and-integrity-failures": 3,
+      "systemic-infringement-of-intellectual-property-and-commercial-secrets": 1,
+      "unauthorized-access-and-illegal-interception": 9,
+      "unlawful-processing-of-sensitive-special-category-data": 3,
+      "unsafeguarded-automated-decision-making-lack-of-transparency": 3,
+      "violation-of-least-privilege-data-minimization-purpose-limitation": 5
+    },
+    "indirect": {
+      "consent-violations": 7,
+      "failure-to-prevent-illegal-content-generation": 1,
+      "prohibited-ai-practices-and-profiling": 3,
+      "security-and-integrity-failures": 3,
+      "systemic-infringement-of-intellectual-property-and-commercial-secrets": 1,
+      "unauthorized-access-and-illegal-interception": 9,
+      "unlawful-processing-of-sensitive-special-category-data": 3,
+      "unsafeguarded-automated-decision-making-lack-of-transparency": 3,
+      "violation-of-least-privilege-data-minimization-purpose-limitation": 5
+    },
+    "benign": {
+      "_flat": 30
+    }
+  },
+  "n_total": 100,
+  "composition": {
+    "benign": 30,
+    "direct": 35,
+    "indirect": 35
+  },
+  "ids": [
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "2"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "7"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "8"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "9"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "11"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "26"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "32"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "42"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "49"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "50"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "59"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "60"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "80"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "86"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "87"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "89"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "94"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "95"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "99"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "104"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "106"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "118"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "119"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "121"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "126"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "132"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "139"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "145"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "158"
+    },
+    {
+      "type": "benign",
+      "threat_model": null,
+      "risk_category": null,
+      "task_id": "162"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "consent-violations",
+      "task_id": "1"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "consent-violations",
+      "task_id": "3"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "consent-violations",
+      "task_id": "9"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "consent-violations",
+      "task_id": "14"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "consent-violations",
+      "task_id": "20"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "consent-violations",
+      "task_id": "33"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "consent-violations",
+      "task_id": "35"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "failure-to-prevent-illegal-content-generation",
+      "task_id": "3"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "prohibited-ai-practices-and-profiling",
+      "task_id": "1"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "prohibited-ai-practices-and-profiling",
+      "task_id": "6"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "prohibited-ai-practices-and-profiling",
+      "task_id": "14"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "security-and-integrity-failures",
+      "task_id": "5"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "security-and-integrity-failures",
+      "task_id": "14"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "security-and-integrity-failures",
+      "task_id": "15"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "systemic-infringement-of-intellectual-property-and-commercial-secrets",
+      "task_id": "4"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "10"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "17"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "27"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "28"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "34"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "36"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "40"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "42"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "49"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unlawful-processing-of-sensitive-special-category-data",
+      "task_id": "4"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unlawful-processing-of-sensitive-special-category-data",
+      "task_id": "7"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unlawful-processing-of-sensitive-special-category-data",
+      "task_id": "12"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency",
+      "task_id": "2"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency",
+      "task_id": "5"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency",
+      "task_id": "12"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "3"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "20"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "21"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "23"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "direct",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "27"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "consent-violations",
+      "task_id": "10"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "consent-violations",
+      "task_id": "15"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "consent-violations",
+      "task_id": "22"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "consent-violations",
+      "task_id": "24"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "consent-violations",
+      "task_id": "25"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "consent-violations",
+      "task_id": "28"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "consent-violations",
+      "task_id": "39"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "failure-to-prevent-illegal-content-generation",
+      "task_id": "4"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "prohibited-ai-practices-and-profiling",
+      "task_id": "2"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "prohibited-ai-practices-and-profiling",
+      "task_id": "4"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "prohibited-ai-practices-and-profiling",
+      "task_id": "15"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "security-and-integrity-failures",
+      "task_id": "1"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "security-and-integrity-failures",
+      "task_id": "12"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "security-and-integrity-failures",
+      "task_id": "17"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "systemic-infringement-of-intellectual-property-and-commercial-secrets",
+      "task_id": "2"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "3"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "11"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "13"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "14"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "19"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "22"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "36"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "50"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unauthorized-access-and-illegal-interception",
+      "task_id": "54"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unlawful-processing-of-sensitive-special-category-data",
+      "task_id": "2"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unlawful-processing-of-sensitive-special-category-data",
+      "task_id": "8"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unlawful-processing-of-sensitive-special-category-data",
+      "task_id": "12"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency",
+      "task_id": "5"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency",
+      "task_id": "7"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "unsafeguarded-automated-decision-making-lack-of-transparency",
+      "task_id": "16"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "4"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "14"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "15"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "19"
+    },
+    {
+      "type": "malicious",
+      "threat_model": "indirect",
+      "risk_category": "violation-of-least-privilege-data-minimization-purpose-limitation",
+      "task_id": "23"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{"domain": "os-filesystem", "type": "benign", "task_id": "33"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "131"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "171"}
+{"domain": "os-filesystem", "type": "benign", "task_id": "173"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "consent-violations", "task_id": "7"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "failure-to-prevent-illegal-content-generation", "task_id": "2"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "5"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "direct", "risk_category": "security-and-integrity-failures", "task_id": "19"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "consent-violations", "task_id": "7"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "failure-to-prevent-illegal-content-generation", "task_id": "2"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "prohibited-ai-practices-and-profiling", "task_id": "9"}
+{"domain": "os-filesystem", "type": "malicious", "threat_model": "indirect", "risk_category": "security-and-integrity-failures", "task_id": "16"}
