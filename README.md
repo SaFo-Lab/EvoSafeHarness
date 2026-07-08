@@ -1,15 +1,15 @@
 <div align="center">
 
-# HarneSS
+# AutoSafeHarness
 
 ### *Automatically securing agents with model- and domain-specific safety harnesses*
 
 **Search the harness, not the model.**
 
-[![Code](https://img.shields.io/badge/code-github-181717?logo=github)](https://github.com/SaFo-Lab/HarneSS)
+[![Code](https://img.shields.io/badge/code-github-181717?logo=github)](https://github.com/SaFo-Lab/AutoSafeHarness)
 [![Website](https://img.shields.io/badge/website-live-0a7d34)](https://andylinx.github.io/Harness_Secure_Website/)
 
-Nanxi Li · Chaowei Xiao — Johns Hopkins University
+Nanxi Li · Yulong Cao · Yejin Choi · Edward Suh · Chaowei Xiao
 
 </div>
 
@@ -26,7 +26,7 @@ once by experts, bolted onto every model and every deployment. But the threat
 isn't uniform — **each model fails in its own way, and each domain calls a
 different action "dangerous."** A defense frozen in advance fits none of them well.
 
-**HarneSS** takes the opposite stance. It leaves the model frozen and instead
+**AutoSafeHarness** takes the opposite stance. It leaves the model frozen and instead
 **searches the scaffolding around it** — the system prompt **and** the tool-call
 hooks — reading the failure traces of the exact model it defends and scoring on
 the exact domain it protects. The output is a concrete, runnable **defense
@@ -118,7 +118,7 @@ pip install -r requirements.txt && pip install -e .   # Docker required; dataset
 Pick a domain and a victim model — say **GLM-5 on os-filesystem**:
 
 ```bash
-REL=/path/to/HarneSS-data-driven-release
+REL=/path/to/AutoSafeHarness
 DT=/path/to/DecodingTrust-Agent           # your stock checkout from step 1
 
 # (a) our code overlay (added + modified source files)
@@ -186,7 +186,7 @@ full schema. Repeat across the three domains and five victims to rebuild the
 
 ## 🙏 Acknowledgments
 
-HarneSS builds directly on prior work, which we gratefully acknowledge:
+AutoSafeHarness builds directly on prior work, which we gratefully acknowledge:
 
 - **[DecodingTrust-Agent (DTAP)](https://github.com/AI-secure/DecodingTrust-Agent)** —
   the multi-domain agent red-teaming platform our main results run on; it provides the
