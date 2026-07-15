@@ -147,19 +147,36 @@ per-task containers).
 
 ### 4. Search a defense (the loop)
 
+`domains/<domain>/domain_spec.md` is written directly as the prompt for the
+proposer, not a doc to read and translate yourself. Start a coding-agent session
+in `$DT` and hand it that file:
+
 ```bash
-# author dtap_def_v1/{BUNDLE.md,defense.py,__init__.py}, warm-starting from a seed,
-# then propose + score it through the gated cascade (Stage 0→3, score = utility − ASR):
+cd $DT
+claude "Follow @domain_spec.md to refine a secure agent harness for me in the \
+os-filesystem domain. Keep working until you have nothing to refine."
+```
+
+In the paper this loop is driven by Claude Code (Opus 4.8, max effort); the spec
+is agent-agnostic, so you can run it with your own coding agent instead. Inside
+the loop, each iteration authors a new
+`dtap_def_v<N>/{BUNDLE.md,defense.py,__init__.py}` candidate (warm-starting from
+a seed) and scores it itself through the gated cascade:
+
+```bash
+# the agent runs this each iteration — Stage 0→3, score = utility − ASR:
 scripts/cascade.py dtap_def_v1 --parent dtap_def_v0 --rationale "scope-vs-task gate"
 ```
 
-In the paper, authoring `dtap_def_v<N>` and reading the cascade/probe feedback is
-done by Claude Code (Opus 4.8, max effort); you can do it by hand or with your own
-agent. The cascade writes every stage's scores and probe summaries into the
-candidate's `meta.json`. Iterate until the search converges on a best bundle for
-the cell.
+`cascade.py` only scores a candidate that already exists on disk — it never
+authors one. It writes every stage's scores and probe summaries into the
+candidate's `meta.json`, which the agent reads before proposing the next
+candidate. Iterate until the search converges on a best bundle for the cell.
 
 ### 5. Score on the frozen held-out 100
+
+Ask the same agent session ("test `dtap_def_v5` on the held-out set") or run the
+comparison platform yourself:
 
 ```bash
 # edit eval_platform/configs/osfs_subset100.json: set env_root + the defenses to compare
