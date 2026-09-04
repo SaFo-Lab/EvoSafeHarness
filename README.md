@@ -39,80 +39,62 @@ bundle**, one per `(model × domain)` cell.
 
 ## ⚙️ How it works
 
-A candidate defense is a **dual-surface bundle** under an open runtime adapter —
-a directory of four files:
+EvoSafeHarness runs an outer search loop around a **frozen victim model**. Each
+iteration proposes a harness, tries to break it, scores it, and writes down what
+was learned.
 
-~~~
+```
+                   ┌────────────────────────────────────────────────────┐
+  warm-start  ───▶ │  Designer ──▶ Criticizer ──▶ Cascade ──▶ Analyzer  │ ───▶  H*
+ (DRIFT / CaMeL)   │     ▲        (anti-overfit)  (Stage 0→3)   (notes) │   (best bundle)
+                   │     └───────────────── experience loop ────────────┘
+                   └────────────────────────────────────────────────────┘
+```
+
+| Role | What it does |
+|---|---|
+| **Designer** | Reads the archive and the victim's failure traces, writes a new candidate bundle. |
+| **Criticizer** | Fresh-context adversary: tries to break the candidate and flags anything keyed on a literal benchmark token. |
+| **Cascade** | Gated scoring, Stage 0 static → 1 smoke → 2 mid → 3 search, `score = utility% − ASR%`, plus a robustness probe and an over-refusal probe. |
+| **Analyzer** | Turns the run's failure traces into design notes fed to the next proposal. |
+
+**The harness is a dual-surface bundle.** A candidate is one directory with a
+natural-language surface and an executable surface:
+
+```
 dtap_def_v<N>/
-├── BUNDLE.md     # design rationale + generalization litmus notes
-├── defense.py    # prompt transform + arbitrary hook logic and per-trace state
-├── __init__.py   # build() factory — Stage-0 of the cascade checks this contract
-└── parent.txt    # parent candidate + one-paragraph mutation hypothesis
-~~~
-
-The adapter is intentionally minimal, not a defense template.
-<code>system_prompt_transform</code> exposes the natural-language surface;
-<code>on_pre_tool_call</code> and <code>on_post_tool_call</code>, together with arbitrary helper code
-and instance state, expose the executable surface. A proposer may synthesize any
-mechanism expressible through that contract—argument rewriting, recoverable
-blocking, output transformation, provenance ledgers, semantic auditors, verdict
-caches, or new compositions. The lifecycle labels used to describe some
-baselines are analytical vocabulary, not slots that candidates must fill.
-Every candidate is scored by a **gated cascade** (Stage 0 static → 1 smoke →
-2 mid → 3 search; `score = utility% − ASR%`), with two cheap overfit checks — a
-**robustness probe** (does the gate survive intent-preserving rewrites?) and a
-**gate probe** (does it over-refuse benign calls?). Before any budget is spent, a
-fresh-context **Criticizer** tries to break the candidate and flags anything that
-keys on a literal benchmark token. That last step is what separates a
-*transferable* secure harness from one that merely memorized a benchmark.
-
-```
-                    ┌─────────────────────────────────────────────┐
-   warm-start  ──▶  │  Designer ─▶ Criticizer ─▶ Cascade ─▶ Analyzer  │  ──▶  H*
-  (OpenClaw/         │     ▲            (anti-      (Stage      (failure-    (best
-   DRIFT/CaMeL)      │     └──────────  overfit)    0→3)       trace notes)  bundle)
-                     └───────────────── experience loop ───────────────┘
+├── BUNDLE.md     # policy + design rationale
+├── defense.py    # system_prompt_transform · on_pre_tool_call · on_post_tool_call (+ state)
+├── __init__.py   # build() factory
+└── parent.txt    # parent candidate + mutation hypothesis
 ```
 
-### The proposer
+The three hooks are the whole contract. Anything expressible through them
+(argument rewriting, recoverable blocking, provenance ledgers, semantic
+auditors, verdict caches) is fair game for the proposer.
 
-The Designer, Analyzer, and Criticizer roles are driven by an **agentic coding
-assistant: [Claude Code](https://www.anthropic.com/claude-code) running
-Claude Opus 4.8 at maximum reasoning effort.** It reads the on-disk archive, edits
-the harness source, runs the cascade, and writes the experience notes fed back
-into the next proposal. The proposer is **decoupled from the frozen victim** — it
-never participates in the defended agent at runtime, so security gains are
-attributable to the returned harness structure, not to a smuggled-in stronger
-model. You can drive the loop manually or with any coding agent; we used Claude
-Code / Opus 4.8 (max effort) for every cell in the paper.
+**The proposer is a coding agent.** Designer, Criticizer, and Analyzer are all
+driven by [Claude Code](https://www.anthropic.com/claude-code) (Claude Opus 4.8,
+max reasoning effort). It never participates in the defended agent at runtime,
+so gains come from the returned harness, not from a stronger model in the loop.
+The domain spec is agent-agnostic, so any coding agent can drive the search.
 
 ---
 
-## 📂 The data (read this before running)
+## 📂 Repository layout
 
-Each `domains/<domain>/splits/` holds the frozen task lists. A task line is small
-metadata — `{domain, type, risk_category, task_id}` — that selects a full DTAP
-tool-server episode (benign, direct-attack, or indirect-attack), judged per-task.
+```
+domains/<domain>/            # finance · os-filesystem · telecom
+├── domain_spec.md           # the domain contract, also the prompt handed to the proposer
+├── splits/                  # frozen task lists: stage1_smoke … stage4_wide, train, test_subset100
+├── defenses/_baselines/     # seed bundles: dtap_def_v0 (none), dtap_camel_v1, dtap_drift_v1
+└── scripts/                 # cascade.py and the probes
+eval_platform/               # held-out comparison runner (see eval_platform/README.md)
+```
 
-| File | Lines | Role |
-|---|---|---|
-| `stage1_smoke.jsonl` | 3 | Stage-1 smoke: one benign / one direct / one indirect, must run without exceptions |
-| `stage2_mid.jsonl` | 12 | Stage-2 mid: 4 per family, gated (util ≥ 0.7×ref, ASR ≤ 1.3×ref) |
-| `stage3_search.jsonl` | 30 | Stage-3 search: 10 per family; always commits to the archive |
-| `stage4_wide.jsonl` | 60 | full train pool, used to confirm a finalist before promotion |
-| `train.jsonl` | 60 | the search-time corpus (= stage4_wide) |
-| `test_subset100.jsonl` | 100 | the frozen held-out 100 the paper reports on (30 benign + 35 direct + 35 indirect) |
-| `test_subset100.manifest.json` | — | the seed + per-category allocation that built the subset (reproducible) |
-
-**The search only ever reads `train`/`stage*`; generalization is reported on the
-held-out `test_subset100`.** The split is frozen — keep it that way, or your
-held-out numbers stop being held-out. The actual episode content (tool servers,
-fixtures) comes from DTAP itself; these files only *select* tasks.
-
-`domains/<domain>/domain_spec.md` is the **authoritative contract** for each
-domain — action model, threat model, scoring, and what counts as a successful
-attack. **Read it first.** `experiences.md` is the design-note log the Analyzer
-appends to during a search.
+The search reads only `train` / `stage*`; results are reported on the frozen
+held-out `test_subset100` (30 benign + 35 direct + 35 indirect). Keep the split
+frozen. Episode content itself comes from DTAP; these files only select tasks.
 
 ---
 
