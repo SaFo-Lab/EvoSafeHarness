@@ -1,15 +1,18 @@
 <div align="center">
 
-# AutoSafeHarness
+# EvoSafeHarness
 
-### *Automatically securing agents with model- and domain-specific safety harnesses*
+### *Evolving model- and domain-specific harnesses for securing agents*
 
 **Search the harness, not the model.**
 
-[![Code](https://img.shields.io/badge/code-github-181717?logo=github)](https://github.com/SaFo-Lab/AutoSafeHarness)
-[![Website](https://img.shields.io/badge/website-live-0a7d34)](https://andylinx.github.io/Harness_Secure_Website/)
+[![Paper](https://img.shields.io/badge/paper-PDF-b31b1b)](https://andylinx.github.io/EvoSafeHarness/assets/EvoSafeHarness_paper.pdf)
+[![Code](https://img.shields.io/badge/code-github-181717?logo=github)](https://github.com/SaFo-Lab/EvoSafeHarness)
+[![Website](https://img.shields.io/badge/website-live-0a7d34)](https://andylinx.github.io/EvoSafeHarness/)
 
-Nanxi Li · Yulong Cao · Yejin Choi · Edward Suh · Chaowei Xiao
+Nanxi Li<sup>1</sup> · Yingzi Ma<sup>2</sup> · Yulong Cao<sup>3</sup> · Edward Suh<sup>3</sup> · Bo Li<sup>4</sup> · Dawn Song<sup>5</sup> · Chaowei Xiao<sup>1,3</sup>
+
+<sup>1</sup>Johns Hopkins University · <sup>2</sup>University of Wisconsin–Madison · <sup>3</sup>NVIDIA · <sup>4</sup>University of Illinois Urbana–Champaign · <sup>5</sup>UC Berkeley
 
 </div>
 
@@ -26,7 +29,7 @@ once by experts, bolted onto every model and every deployment. But the threat
 isn't uniform — **each model fails in its own way, and each domain calls a
 different action "dangerous."** A defense frozen in advance fits none of them well.
 
-**AutoSafeHarness** takes the opposite stance. It leaves the model frozen and instead
+**EvoSafeHarness** takes the opposite stance. It leaves the model frozen and instead
 **searches the scaffolding around it** — the system prompt **and** the tool-call
 hooks — reading the failure traces of the exact model it defends and scoring on
 the exact domain it protects. The output is a concrete, runnable **defense
@@ -36,15 +39,25 @@ bundle**, one per `(model × domain)` cell.
 
 ## ⚙️ How it works
 
-A candidate defense is a **dual-surface bundle** — a directory of four files:
+A candidate defense is a **dual-surface bundle** under an open runtime adapter —
+a directory of four files:
 
-```
+~~~
 dtap_def_v<N>/
-├── BUNDLE.md     # the natural-language policy (5 taxonomy sections) + litmus notes
-├── defense.py    # the code surface: three hooks, each defaulting to identity
+├── BUNDLE.md     # design rationale + generalization litmus notes
+├── defense.py    # prompt transform + arbitrary hook logic and per-trace state
 ├── __init__.py   # build() factory — Stage-0 of the cascade checks this contract
 └── parent.txt    # parent candidate + one-paragraph mutation hypothesis
-```
+~~~
+
+The adapter is intentionally minimal, not a defense template.
+<code>system_prompt_transform</code> exposes the natural-language surface;
+<code>on_pre_tool_call</code> and <code>on_post_tool_call</code>, together with arbitrary helper code
+and instance state, expose the executable surface. A proposer may synthesize any
+mechanism expressible through that contract—argument rewriting, recoverable
+blocking, output transformation, provenance ledgers, semantic auditors, verdict
+caches, or new compositions. The lifecycle labels used to describe some
+baselines are analytical vocabulary, not slots that candidates must fill.
 Every candidate is scored by a **gated cascade** (Stage 0 static → 1 smoke →
 2 mid → 3 search; `score = utility% − ASR%`), with two cheap overfit checks — a
 **robustness probe** (does the gate survive intent-preserving rewrites?) and a
@@ -118,7 +131,7 @@ pip install -r requirements.txt && pip install -e .   # Docker required; dataset
 Pick a domain and a victim model — say **GLM-5 on os-filesystem**:
 
 ```bash
-REL=/path/to/AutoSafeHarness
+REL=/path/to/EvoSafeHarness
 DT=/path/to/DecodingTrust-Agent           # your stock checkout from step 1
 
 # (a) our code overlay (added + modified source files)
@@ -198,12 +211,19 @@ full schema. Repeat across the three domains and five victims to rebuild the
 
 ## 📝 Citation
 
+```bibtex
+@article{evosafeharness2026,
+  title   = {EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents},
+  author  = {Li, Nanxi and Ma, Yingzi and Cao, Yulong and Suh, Edward and Li, Bo and Song, Dawn and Xiao, Chaowei},
+  year    = {2026}
+}
+```
 
 ---
 
 ## 🙏 Acknowledgments
 
-AutoSafeHarness builds directly on prior work, which we gratefully acknowledge:
+EvoSafeHarness builds directly on prior work, which we gratefully acknowledge:
 
 - **[DecodingTrust-Agent (DTAP)](https://github.com/AI-secure/DecodingTrust-Agent)** —
   the multi-domain agent red-teaming platform our main results run on; it provides the
